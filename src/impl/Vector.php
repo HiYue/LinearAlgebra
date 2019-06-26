@@ -12,12 +12,28 @@ use Countable;
 
 class Vector implements IVector, Countable
 {
+    /**
+     * @var array $_values
+     */
     private $_values;
 
     public function __construct($data)
     {
         $this->_values = $data;
     }
+
+    /**
+     * @return float
+     */
+    public function norm()
+    {
+        $total = 0;
+        for ($i=0;$i<$this->dimension();$i++){
+            $total += $this->get($i) * $this->get($i);
+        }
+        return sqrt($total);
+    }
+
 
     /**
      * @return bool

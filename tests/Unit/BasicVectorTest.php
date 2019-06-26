@@ -9,6 +9,11 @@ use Yue\LinearAlgebra\impl\Vector;
 
 class BasicVectorTest extends \PHPUnit\Framework\TestCase
 {
+    public function testVectorNorm(){
+        $u = $this->getVector([3,4]);
+        $this->assertEquals(5,$u->norm());
+    }
+
     public function testVectorSatisfyRules(){
         $u = $this->getVector();
         $v = $this->getVector();

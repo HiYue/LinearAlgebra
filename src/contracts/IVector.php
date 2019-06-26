@@ -26,7 +26,9 @@ interface IVector
 
     /**
      * Vector can multiply a scala
-     * @param int|float $scalaValue
+     * 如果是两个IVector相乘，那么 U * V = ||U|| * ||V|| * cos(两个向量的夹角)
+     *
+     * @param int|float|IVector $scalaValue
      * @return IVector
      */
     public function multiply($scalaValue):IVector;
@@ -42,4 +44,10 @@ interface IVector
      * @return bool
      */
     public function isZeroVector():bool ;
+
+    /**
+     * 向量的模
+     * @return float
+     */
+    public function norm();
 }
