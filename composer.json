@@ -1,0 +1,25 @@
+{
+    "name": "justinwang/linear-algebra",
+    "description": "Linear Algebra Lib",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Justin Wang",
+            "email": "justinwang24@yahoo.com.au"
+        }
+    ],
+    "license": "MIT",
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yue\\LinearAlgebra\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "scripts":{
+        "test": "./vendor/bin/phpunit"
+    }
+}
